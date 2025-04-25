@@ -69,6 +69,10 @@ app.use("/api/doctors", doctorRoutes);
 app.use("/api/medicines", medicineRoutes);
 app.use("/api/orders", orderRoutes);
 app.use("/api/faqs", faqRoutes);
-app.use("/api/charts", chartRoutes); // ✅ Added Chart API
+app.use("/api/charts", chartRoutes);
+app.get('/', (req, res) => {
+  res.send("server running");
+});
+   // ✅ Added Chart API
 
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
